@@ -51,7 +51,7 @@ class CreateStudent extends Component {
     console.log(data);
 
     axios
-      .post('https://studentbackendnode1.onrender.com/students.create', data)
+      .post('https://studentbackendnode1.onrender.com/students', data)
       .then(res => {
         this.setState({
           name: '',
