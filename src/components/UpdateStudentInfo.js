@@ -16,7 +16,7 @@ class UpdateStudentInfo extends Component {
   componentDidMount() {
     // console.log("Print id: " + this.props.match.params.id);
     axios
-      .get('http://localhost:8080/students/'+this.props.match.params.id)
+      .get('https://studentbackendnode1.onrender.com/students/'+this.props.match.params.id)
       .then(res => {
         // this.setState({...this.state, book: res.data})
         this.setState({
@@ -44,7 +44,7 @@ class UpdateStudentInfo extends Component {
     };
 
     axios
-      .put('http://localhost:8080/students/'+this.props.match.params.id, data)
+      .put('https://studentbackendnode1.onrender.com/students/'+this.props.match.params.id, data)
       .then(res => {
         this.props.history.push('/show-student/'+this.props.match.params.id);
       })

@@ -13,7 +13,7 @@ class showStudentDetails extends Component {
 
   componentDidMount() {
     //console.log("Print id: " + this.props.match.params.id);
-    axios.get('http://localhost:8080/students/'+this.props.match.params.id)
+    axios.get('https://studentbackendnode1.onrender.com/students/'+this.props.match.params.id)
       .then(res => {
          //console.log("Print-showStudentDetails-API-response: " + res.data);
         this.setState({
@@ -32,7 +32,7 @@ class showStudentDetails extends Component {
     {
       
     axios
-      .delete('http://localhost:8080/students/'+id)
+      .delete('https://studentbackendnode1.onrender.com/students/'+id)
       .then(res => {
         alert('deleted')
         this.props.history.push("/");

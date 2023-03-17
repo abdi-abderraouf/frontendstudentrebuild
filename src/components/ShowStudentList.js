@@ -14,7 +14,7 @@ class ShowStudentList extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:8080/students')
+      .get('https://studentbackendnode1.onrender.com/students')
       .then(res => {
         this.setState({
           students: res.data
